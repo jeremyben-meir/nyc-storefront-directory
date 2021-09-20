@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/open-storefront-directory/static/css/main.55595d3d.chunk.css",
-    "main.js": "/open-storefront-directory/static/js/main.2ec3680a.chunk.js",
-    "main.js.map": "/open-storefront-directory/static/js/main.2ec3680a.chunk.js.map",
+    "main.js": "/open-storefront-directory/static/js/main.dd2263f0.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.dd2263f0.chunk.js.map",
     "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.b5e0e835.js",
     "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.b5e0e835.js.map",
     "static/js/2.cff8b5fc.chunk.js": "/open-storefront-directory/static/js/2.cff8b5fc.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.b5e0e835.js",
     "static/js/2.cff8b5fc.chunk.js",
     "static/css/main.55595d3d.chunk.css",
-    "static/js/main.2ec3680a.chunk.js"
+    "static/js/main.dd2263f0.chunk.js"
   ]
 }

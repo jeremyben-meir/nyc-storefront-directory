@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/open-storefront-directory/static/css/main.a617e044.chunk.css",
+    "main.js": "/open-storefront-directory/static/js/main.1e4a0d21.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.1e4a0d21.chunk.js.map",
+    "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.85894eee.js",
+    "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.85894eee.js.map",
+    "static/js/2.df00525e.chunk.js": "/open-storefront-directory/static/js/2.df00525e.chunk.js",
+    "static/js/2.df00525e.chunk.js.map": "/open-storefront-directory/static/js/2.df00525e.chunk.js.map",
+    "static/js/3.f187174b.chunk.js": "/open-storefront-directory/static/js/3.f187174b.chunk.js",
+    "static/js/3.f187174b.chunk.js.map": "/open-storefront-directory/static/js/3.f187174b.chunk.js.map",
+    "index.html": "/open-storefront-directory/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/open-storefront-directory/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.df00525e.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.df00525e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/open-storefront-directory/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85894eee.js",
+    "static/js/2.df00525e.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.1e4a0d21.chunk.js"
+  ]
+}

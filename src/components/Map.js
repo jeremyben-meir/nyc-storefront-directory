@@ -261,13 +261,13 @@ export const Map = () => {
     return (
         <div> 
             <div ref={mapContainer} style={{ width: "100vw", height: "100vh" }}>
-                <div id="state-legend" class="legend" style={legend_style}>
+                <div id="state-legend" className="legend" style={legend_style}>
                     <h4 style={legend_h4_style}>{map_focus}</h4>
                     {Object.entries(map_string_dict).map((item, index) => 
                         <div><span style={{...legend_div_span_style, backgroundColor: map_focus_dict[index]}}></span>{map_string_dict[index]}</div>
                     )}
                 </div>
-                <div id="state-legend" class="legend" style={legend_style_left}>
+                <div id="state-legend" className="legend" style={legend_style_left}>
                     {(map_focus == "Vacancy" || map_focus == "Turnover") ? bbl_htm : llid_htm}
                 </div>
             </div>

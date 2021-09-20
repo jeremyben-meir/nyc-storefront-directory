@@ -18,18 +18,18 @@ const brand = { name: "open-storefront-directory", to: "home" };
 
 function App() {
   return (
-    <React.Fragment>
+      <Router>
+      <React.Fragment>
       <Navbar brand={brand} links={navlinks} />
       
-      <Router>
         <Switch>
           <Route path="/open-storefront-directory" exact component={Home}/>
           <Route path="/open-storefront-directory/about" exact component={About}/>
           <Route path="/open-storefront-directory/methods" exact component={Methods}/>
-          <Route component={NoMatch}/>
+          <Route path="/open-storefront-directory" component={NoMatch}/>
         </Switch>
-      </Router>
     </React.Fragment>
+    </Router>
   );
 }
 

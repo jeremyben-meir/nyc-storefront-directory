@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Route, Switch, Link } from "react-router-dom";
 import {StyledNavbarTop, Transition, A} from '../assets/NavbarStyles.js';
 
 export default class Navbar extends React.Component {
@@ -46,9 +47,9 @@ export default class Navbar extends React.Component {
       
         const NavLinks = () =>
           links.map((link, index) => (
-            <A key={index} href={link.to}>
-              {link.name}
-            </A>
+            <Link to={link.to}>
+              <A key={index}>{link.name}</A>
+            </Link>
         ));
       
         return (

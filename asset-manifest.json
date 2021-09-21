@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/open-storefront-directory/static/css/main.55595d3d.chunk.css",
-    "main.js": "/open-storefront-directory/static/js/main.2b80737a.chunk.js",
-    "main.js.map": "/open-storefront-directory/static/js/main.2b80737a.chunk.js.map",
-    "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.b5e0e835.js",
-    "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.b5e0e835.js.map",
-    "static/js/2.cff8b5fc.chunk.js": "/open-storefront-directory/static/js/2.cff8b5fc.chunk.js",
-    "static/js/2.cff8b5fc.chunk.js.map": "/open-storefront-directory/static/js/2.cff8b5fc.chunk.js.map",
-    "static/js/3.393caf27.chunk.js": "/open-storefront-directory/static/js/3.393caf27.chunk.js",
-    "static/js/3.393caf27.chunk.js.map": "/open-storefront-directory/static/js/3.393caf27.chunk.js.map",
+    "main.js": "/open-storefront-directory/static/js/main.00763239.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.00763239.chunk.js.map",
+    "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.b1f86b20.js",
+    "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.b1f86b20.js.map",
+    "static/js/2.1ea55003.chunk.js": "/open-storefront-directory/static/js/2.1ea55003.chunk.js",
+    "static/js/2.1ea55003.chunk.js.map": "/open-storefront-directory/static/js/2.1ea55003.chunk.js.map",
+    "static/js/3.7a25bc90.chunk.js": "/open-storefront-directory/static/js/3.7a25bc90.chunk.js",
+    "static/js/3.7a25bc90.chunk.js.map": "/open-storefront-directory/static/js/3.7a25bc90.chunk.js.map",
     "index.html": "/open-storefront-directory/index.html",
     "static/css/main.55595d3d.chunk.css.map": "/open-storefront-directory/static/css/main.55595d3d.chunk.css.map",
-    "static/js/2.cff8b5fc.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.cff8b5fc.chunk.js.LICENSE.txt",
+    "static/js/2.1ea55003.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.1ea55003.chunk.js.LICENSE.txt",
     "static/js/mapbox-gl-csp-worker.9683f0af.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js",
     "static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5e0e835.js",
-    "static/js/2.cff8b5fc.chunk.js",
+    "static/js/runtime-main.b1f86b20.js",
+    "static/js/2.1ea55003.chunk.js",
     "static/css/main.55595d3d.chunk.css",
-    "static/js/main.2b80737a.chunk.js"
+    "static/js/main.00763239.chunk.js"
   ]
 }

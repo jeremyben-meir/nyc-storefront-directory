@@ -1,5 +1,30 @@
 import styled from "styled-components";
 
+export const StyledNavbar = styled.div`
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+margin: 0 auto;
+height: 5rem;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+font-weight: bolder;
+background: white;
+z-index: 1000;
+h2 {
+  margin-left: 2rem;
+}
+.brand {
+  font-style: italic;
+  margin-left: 3rem;
+  font-weight: bold;
+  color: white;
+  font-size: 1.25rem;
+}`;
+
 export const StyledNavbarTop = styled.div`
 position: fixed;
 top: 0;
@@ -18,9 +43,8 @@ background: linear-gradient(
   rgba(0, 0, 0, 0)
 );
 z-index: 1000;
-a {
-  margin-right: 3rem;
-  font-weight: normal;
+h2 {
+  margin-left: 2rem;
 }
 .brand {
   font-style: italic;
@@ -69,5 +93,8 @@ export const Transition = styled.div`
 
 export const A = styled.a`
 color: #000000;
+text-decoration: none;
+margin-right: 3rem;
+margin-left: 3rem;
 text-decoration: none;
 `;

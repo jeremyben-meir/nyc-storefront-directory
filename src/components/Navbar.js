@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch, Link } from "react-router-dom";
-import {StyledNavbarTop, Transition, A} from '../assets/NavbarStyles.js';
+import {StyledNavbarTop,StyledNavbar, Transition, A} from '../assets/NavbarStyles.js';
 
 export default class Navbar extends React.Component {
     constructor(props) {
@@ -47,7 +47,7 @@ export default class Navbar extends React.Component {
       
         const NavLinks = () =>
           links.map((link, index) => (
-            <Link to={link.to}>
+            <Link to={link.to}  style={{ textDecoration: 'none' }}>
               <A key={index}>{link.name}</A>
             </Link>
         ));
@@ -55,11 +55,18 @@ export default class Navbar extends React.Component {
         return (
             <Transition>
             <StyledNavbarTop className={this.state.show ? "botbar" : "topbar"}>
-              <a> Open Storefront Data </a>
+              <h2> Open Storefront Data </h2>
               <nav>
                 <NavLinks />
               </nav>
             </StyledNavbarTop>
+            <StyledNavbar className={this.state.show ? "topbar" : "botbar"}>
+              <h2> Open Storefront Data </h2>
+              <nav>
+                <NavLinks />
+              </nav>
+            </StyledNavbar>
+
             </Transition>
         );
     }

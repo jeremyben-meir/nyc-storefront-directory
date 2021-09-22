@@ -52,7 +52,7 @@ export const PDFContainer = styled.div`
 background-color: #fff;
 margin-right:auto;
 margin-left:auto;
-width:50%;
+width:595px;
 box-shadow: 0 0 30px #000;
 `
 

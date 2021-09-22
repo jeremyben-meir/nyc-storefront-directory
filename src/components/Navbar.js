@@ -55,13 +55,13 @@ export default class Navbar extends React.Component {
         return (
             <Transition>
             <StyledNavbarTop className={this.state.show ? "botbar" : "topbar"}>
-              <h2> Open Storefront Data </h2>
+              <h2> Open Storefront Directory </h2>
               <nav>
                 <NavLinks />
               </nav>
             </StyledNavbarTop>
             <StyledNavbar className={this.state.show ? "topbar" : "botbar"}>
-              <h2> Open Storefront Data </h2>
+              <h2> Open Storefront Directory </h2>
               <nav>
                 <NavLinks />
               </nav>

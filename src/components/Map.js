@@ -103,6 +103,8 @@ export const Map = () => {
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/light-v10',
             zoom: 10.5,
+            maxZoom: 15.5,
+            minZoom: 8,
             center: [-73.962141,40.72796]
         });
 

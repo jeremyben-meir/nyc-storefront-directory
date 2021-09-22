@@ -4,15 +4,15 @@ import React from "react";
 
 import Home from './views/Home';
 import About from './views/About';
-import Methods from './views/Methods';
+import Team from './views/Team';
 import NoMatch from './views/NoMatch';
 
 import Navbar from './components/Navbar';
 
 const navlinks = [
   { name: "Map", to: "/open-storefront-directory" },
-  { name: "Methods", to: "/open-storefront-directory/methods" },
-  { name: "About", to: "/open-storefront-directory/about" }
+  { name: "About", to: "/open-storefront-directory/about" },
+  { name: "Team", to: "/open-storefront-directory/team" }
 ];
 const brand = { name: "open-storefront-directory", to: "home" };
 
@@ -25,7 +25,7 @@ function App() {
         <Switch>
           <Route path="/open-storefront-directory" exact component={Home}/>
           <Route path="/open-storefront-directory/about" exact component={About}/>
-          <Route path="/open-storefront-directory/methods" exact component={Methods}/>
+          <Route path="/open-storefront-directory/team" exact component={Team}/>
           <Route path="/open-storefront-directory" component={NoMatch}/>
         </Switch>
     </React.Fragment>

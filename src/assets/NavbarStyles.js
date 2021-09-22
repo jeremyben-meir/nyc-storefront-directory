@@ -14,6 +14,7 @@ align-items: center;
 font-weight: bolder;
 background: white;
 z-index: 1000;
+box-shadow: 0 0 20px #444;
 h2 {
   margin-left: 2rem;
 }

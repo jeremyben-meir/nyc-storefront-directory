@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";  
 import ignacio from '../assets/team/ignacio.png';
-import willie from '../assets/team/willie.png';
+import william from '../assets/team/willie.png';
 import jeremy from '../assets/team/jeremy.png';
+import linkedin from '../assets/team/linkedin.png';
+import { Route, Switch, Link } from "react-router-dom";
 
 export default function Map() {
 
@@ -10,16 +12,22 @@ export default function Map() {
             "lastname": "Ben-Meir",
             "img": jeremy,
             "uni": "Cornell University",
+            "linkedin": "https://www.linkedin.com/in/jeremy-ben-meir/",
+            "email": "jsb459@cornell.edu",
         },
         "Ignacio": {
             "lastname": "Lopez Gaffney",
             "img": ignacio,
             "uni": "Columbia University",
+            "linkedin": "https://www.linkedin.com/in/ignacio-l-a4a05618a/",
+            "email": "iml2114@columbia.edu",
         },
-        "Willie": {
+        "William": {
             "lastname": "Swett",
-            "img": willie,
+            "img": william,
             "uni": "Harvard University",
+            "linkedin": null,
+            "email": "wswett@college.harvard.edu",
         },
     };
 
@@ -29,9 +37,15 @@ export default function Map() {
                 <img src={memberList[name]["img"]} alt={name} style={{borderRadius:"50%", width:"100%",height:"100%"}}/>
             </div>
             <div style={{marginTop:"20px"}}>
-                <a>{name + " " + memberList[name]['lastname']}</a><br/>
-                <a>{memberList[name]['uni']}</a>
+                <a style={{fontWeight: "bold"}}>{name + " " + memberList[name]['lastname']}</a><br/>
+                <a>{memberList[name]['uni']}</a><br/>
+                <a>{memberList[name]['email']}</a>
             </div>
+            { memberList[name]['linkedin'] != null && <Link to={{ pathname: memberList[name]['linkedin'] }} target="_blank" rel="noopener noreferrer">
+                <div style={{width:"30px",height:"30px",overflow: "hidden",marginTop:"10px",marginLeft:"auto",marginRight:"auto"}}>
+                    <img src={linkedin} alt={name} style={{width:"100%",height:"100%"}}/>
+                </div>
+            </Link>}
         </div>
     )
 

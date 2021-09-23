@@ -39,9 +39,9 @@ export default function Map() {
             <div style={{marginTop:"20px"}}>
                 <a style={{fontWeight: "bold"}}>{name + " " + memberList[name]['lastname']}</a><br/>
                 <a>{memberList[name]['uni']}</a><br/>
-                <a>{memberList[name]['email']}</a>
+                <a>{memberList[name]['email']}a</a>
             </div>
-            { memberList[name]['linkedin'] != null && <a href={memberList[name]['linkedin']} target="_blank">
+            { memberList[name]['linkedin'] != null && <a href={memberList[name]['linkedin']} target="_blank" rel="noopener noreferrer">
                 <div style={{width:"30px",height:"30px",overflow: "hidden",marginTop:"10px",marginLeft:"auto",marginRight:"auto"}}>
                     <img src={linkedin} alt={name} style={{width:"100%",height:"100%"}}/>
                 </div>

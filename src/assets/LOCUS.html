@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>LaTeX4Web 1.4 OUTPUT</title>
+<style type="text/css">
+<!--
+ body {color: black;  background-color:#FFCC99;  }
+ div.p { margin-top: 7pt;}
+ td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.norm {line-height:normal;}
+ td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td.sqrt {border-top:2 solid black;
+          border-left:2 solid black;
+          border-bottom:none;
+          border-right:none;}
+ table.sqrt {border-top:2 solid black;
+             border-left:2 solid black;
+             border-bottom:none;
+             border-right:none;}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-latin-1"/>
+</head>
+<body>
+\documentclassarticle
+\usepackageamsmath
+\usepackagetitling
+\usepackagegeometry
+
+\usepackageenotez
+ <font face=symbol>£</font> t\footnote=\endnote
+ 
+  <font face=symbol>³</font> ometry
+ a4paper,
+ right=20mm,
+ left=20mm,
+ bottom=20mm,
+ top=20mm,
+ 
+\usepackage[utf8]inputenc
+\usepackagehyperref
+\usepackagexcolor
+\hypersetup
+  colorlinks,
+  citecolor=blue,
+  urlcolor=blue
+\usepackagemathtools
+  
+\usepackagenatbib
+\bibliographystyleplainnat
+
+\title\textbfOpen Storefront Directory <br>
+ A Database of NYC Retail Businesses, 2010 - Present
+\authorJeremy Ben-Meir\thanksCornell University \and Ignacio Lopez Gaffney\thanksColumbia University \and William Swett\thanksHarvard University
+
+
+\begindocument
+
+\hfill
+
+<h1>Introduction</h1>
+Open Storefront Directory is the first longitudinal database of retail businesses in New York City built on publicly available data. The directory is `open<font face=symbol>¢</font> in the sense that it captures businesses that have been open for business in NYC in the past decade. But it is also `open<font face=symbol>¢</font> in another sense: the database is built on open data, made accessible by city and state regulatory agencies. Our ambition is to use this database, which is built on public data, to study public issues related to retail businesses. 
+
+A brief description of the process by which we construct the database follows. First, we collect  government records pertaining to NYC retail businesses, including operating licenses and inspection results. Then, we extract dates, addresses and other identifying information from the records and link information referring to the same entity. Finally, we estimate the start date, end date, and industry for each business. The result is a database of NYC retail businesses covering 2010 to the present. 
+
+<h1>Motivation</h1>
+Storefront vacancy in New York has received considerable attention in the press. Blogs, newspapers, and magazines have, for many years, gone back and forth on the implications of the phenomenon. <font size="-1"><i>The New York Times, for instance, published in 2018 \hrefhttps://www.nytimes.com/interactive/2018/09/06/nyregion/nyc-storefront-vacancy.html?searchResultPosition=3this striking array of images documenting commercial blight. There is a website, \hrefhttp://www.vacantnewyork.com/VacantNewYork.com, which purports to display in red all the vacant storefronts in Manhattan. There is even a blog dedicated to commemorating as many NYC businesses that have closed down in recent years as possible. \hrefhttp://vanishingnewyork.blogspot.com/Vanishing New York. But there are just as many articles that are skeptical of the crisis, such as  \hrefhttps://nymag.com/intelligencer/2018/11/there-is-no-crisis-of-retail-vacancy-in-manhattan.html#:&nbsp;:text=Anyway\%3A\%20Comprehensive\%20data\%20about\%20retail,\%2C\%20closed\%2C\%20unoccupied\%20retail\%20stores.this 2018 New York Magazine article which, among other things, argues that most claims about retail vacancy fail because ``Comprehensive data about retail vacancy in Manhattan doesn’t exist."</i></font> For some, widespread commercial vacancy  constitutes a crisis, symptomatic of the city<font face=symbol>¢</font>s increasing inhospitality to small businesses. For others, shuttered stores are natural, the inevitable product of a dynamic urban economy. Besides disagreement over the consequences of commercial vacancy, there exists a more elemental disagreement over the precise nature of the phenomenon. The question of whether vacancy has, in fact, risen in the past two decades is unresolved. 
+
+Two city agencies have conducted major studies to provide tentative answers to this question. The Department of City Planning found in August 2019 that although storefront vacancy had increased in some commercial corridors between 2007 and 2017, there was no consistent trend throughout the city (see ). A month later, the City Comptroller reached the opposite conclusion, claiming that retail vacancy had increased in the same period (see ). <font size="-1"><i>These studies may also have reached opposite conclusions because of the way they measured storefront vacancy. The City Comptroller measured vacancy in terms of vacant square footage as a percentage of the total square footage, while the Department of City Planning measured vacancy in terms of vacant storefront units as a percentage of total storefront units. 
+</i></font>
+
+Importantly, each study used data that was limited in scope. The Department of City Planning’s data was limited to a handful of commercial corridors, and was observed for two points in time. The Comptroller, meanwhile, estimated that their data was missing about 25\% of commercial properties. <font size="-1"><i>The Comptroller acquired vacant retail square footage data through tax filings. But as it turns out, only certain commercial properties––properties of a certain size and certain value––have to state on their tax filings what portion of their property is vacant. Hence, the comptroller estimated that it was missing about 25\% of commercial properties in New York City.
+
+The Department of City Planning, on the other hand, compared survey data it had collected on a select number of neighborhoods from 2007/2008 with vacancy data for 2017/2018 supplied by LiveXYZ, a technology company that has mapped storefronts in New York City. 
+</i></font>  
+
+While the magnitude of the problem remains obscured by the lack of dispositive research, the pandemic has evidently altered the retail landscape, triggering an unprecedented wave of retail business closures. <font size="-1"><i>According to a \hrefhttps://www.nytimes.com/2020/08/03/nyregion/nyc-small-businesses-closing-coronavirus.htmlstudy done in July 2020 by the small business advocacy group Partnership for New York City, as of July 2020 nearly one third of NYC’s small businesses had closed and would likely never reopen. See, also, for instance, \hrefhttps://www.nytimes.com/2021/09/17/business/retail-vacancies-midtown-manhattan.html?referringSource=articleSharethis NYT article from September, 2021.</i></font> As a result, accurate data on retail businesses is at once more needed and harder to construct. More needed, because the effect of the pandemic must be disambiguated from secular changes to the retail landscape. Harder to construct, because the pandemic has resulted in  simultaneous widespread closures of businesses. In order to understand how city or state policy can intervene effectively,  we can<font face=symbol>¢</font>t just rely on cross-sectional data.
+
+<h1>Current Storefront Data</h1>
+To understand how the retail business landscape has changed, we need data that goes back many years, is updated frequently, is accessible, and has information relevant to vacancy. Four companies - Data Axle, LiveXYZ, SafeGraph, and Dun \& Bradstreet,  - appear to meet at least some of those requirements. While these companies keep their data acquisition methods  confidential, we have been able to discern some aspects of the process. 
+
+Data Axle has millions of U.S. businesses going back to 1997. To verify its information, it tries to call every business at least once a year. Because of this, the data is updated infrequently. <font size="-1"><i>Data Axle shares its methodology on its \hrefhttps://referencesolutions.data-axle.com/wp-content/uploads/2020/09/us-historical-business-1.pdfwebsite</i></font> 
+
+LiveXYZ, which came out in 2018, meanwhile, mapped storefronts by walking every block in New York. They now update their business information by relying on help from their neighborhood partners. Importantly, LiveXYZ tracks storefronts, as opposed to businesses, and as a result can indicate when a storefront is vacant. <font size="-1"><i>Live XYZ<font face=symbol>¢</font>s CEO described the company in an AM NY \hrefhttps://www.amny.com/things-to-do/live-xyz-map-nyc-1-18728789/article.</i></font> 
+
+SafeGraph, which released its first dataset in 2018, seems to have a mostly automated process of acquiring data, using web crawlers and third-party sources. <font size="-1"><i>Safegraph describes its data acquisition process on its \hrefhttps://www.safegraph.com/blog/safegraphs-data-sourcing-processwebsite</i></font>
+
+Finally, we have access to the Dun and Bradstreet database through Harvard<font face=symbol>¢</font>s library, though we are not given any information about how D \& B collects data. Dun & Bradstreet has records for New York City going back to the 80s. 
+
+While there exist other retail business datasets which, anecdotally, are more comprehensive than those mentioned above (e.g. Google and Foursquare), we do not have access to them. 
+
+<h1>Our Data</h1>
+In 2019, the data scientist Lindsay Poirier published a blogpost on the website of BetaNYC (a civic technology non-profit) demonstrating that barbershop licenses, which include the name, address, date of license issuance, and date of license expiration, could be used to create a longitudinal directory of barbershops in NYC (see ). 
+
+We extend this paradigm by acquiring all available regulatory records, including everything from liquor licenses to health inspections. Unlike LiveXYZ, Dun \& Bradstreet, DataAxle, or SafeGraph, these records are accessible, go back many years, and per state law, have to be updated regularly. Importantly, regulatory records can be used to keep track of retail businesses over time at no cost. Instead of hiring someone to verify a restaurant<font face=symbol>¢</font>s existence, we can let a health inspector verify it for us. 
+
+<h1>Methodology</h1>
+Our first task is to acquire the records. To accomplish this, we gather data in three ways: querying public data APIs (such as those on \hrefhttps://opendata.cityofnewyork.us/Open Data NYC and its state counterpart, \hrefhttps://data.ny.gov/NY Open Data), scraping government databases, and filing Freedom of Information Law (FOIL) Requests with state and local agencies. 
+
+Once the records are assembled, we perform basic cleansing, deleting unnecessary columns, type casting data, and filtering out records by zip code or postal city. In the final stage of preprocessing, we assign each record to a tax lot using \hrefhttps://api-portal.nyc.gov/docs/services/geoclient/operations/geoclientthe Geoclient API. This City API takes an address and returns a ten-digit BBL (uniquely identifying each tax lot), as well as the longitude and latitude. BBLs are assigned by the New York City Department of Finance for the purpose of assessing property taxes, but they are also commonly used to aggregate observations to the building-level, as done here.  
+
+Data cleansing is followed by record linkage - the process of determining which records pertain to the same latent entity. For more on the record linkage process, see Appendix <a href="#refrecordlinkage">(0)</a>
+. Through this process, we assign a unique identifier, called a `Location ID<font face=symbol>¢</font> or `LID<font face=symbol>¢</font>, to all of the records that pertain to the same business entity at one particular location. LIDs that share a record identifier (assigned by the agencies) are given the same `Business ID<font face=symbol>¢</font>, or `BID<font face=symbol>¢</font>.
+
+While records often contain some indication of the regulated entity<font face=symbol>¢</font>s industry, this information is not standardized across departments or agencies, and is consequently not in a usable format. Our challenge then is to convert variegated departmental classifications into a standardized industry code, specifically the North American Industry Classification Scheme (NAICS), the standard used by Federal statistical agencies in classifying business establishments. <font size="-1"><i>For more on \hrefhttps://www.census.gov/naics/NAICS codes</i></font> We accomplish this by using a BERT language model, as in , specified for sentence and paragraph-length embeddings called S-BERT. <font size="-1"><i>See  for an in-depth explanation of S-BERT</i></font> Briefly, we concatenate the available departmental classifications (e.g. `Restaurant-Indian<font face=symbol>¢</font>) for each BID into a string, embed it using an S-BERT model pre-trained on a large corpus of natural language, and search across NAICS Code description embeddings to find the one that minimizes the cosine similarity measure. This NAICS code is then assigned to all of the observations in the BID. 
+
+With linked records and consistent industry classification, we proceeded to our final step in the process: establishing every business’ start and end date. As of now, we are taking the first date associated with the business to be the start date, and taking the last date associated with the business to be the end date, with some qualifications. 
+
+
+<h1>Applications</h1>
+On August 23, 2021, in a conversation hosted by BetaNYC, the Manhattan Borough President, Gale Brewer, said that one of the most important areas in which she thought technology could be brought to bear to solve urban problems was in the realm of policy evaluation. The example she cited was a business improvement district (or BID) on 125th Street, which seemed to be thriving, but had yet to be studied comprehensively over time. 
+
+In 2020, thanks to BetaNYC<font face=symbol>¢</font>s advocacy, New York City started an official vacant storefront tracker. If this is an indication of anything, it is that data is critical to informing policy decisions. In fact, we plan to integrate our database with the data from the vacant storefront tracker to create a highly accurate storefront database. 
+
+We plan to use our database for policy evaluation. We are currently looking at proposed City Council legislation, such as Intro (1796), and running an analysis of the Madison Avenue Business Improvement District. More generally, we are hoping to use our database to study issues related to gentrification. 
+
+Immediately, we are in the process of creating an interactive online interface built on the database. Users will be presented with a visualization of the retail businesses that existed in the city at a point in time, and will be given the ability to move forward and backward along this dimension (by months). The website also include the ability to view aggregate measures, such as vacancy and business turnover rates, displayed at the building level. Eventually, we plan to crowdsource data, augmenting the profiles we have created for retail enterprises, past and present.
+
+Finally, one more application of this database we are considering is the creation of a retail site location app. By combining our storefront database with other datasets available on Open Data, such as subway station locations, schools, parks, and demographic information, we can come to an understanding of how geographical features affect vacancy rates and business turnover rates. We can also use our data to create hedonic models that predict rent pricing. Our vision is a widely accessible retail site location app built on publicly available data.
+
+<h1>Conclusion</h1>
+
+While this project is still in its early stages, we are hopeful that the data will be useful for policy evaluation, and that users will enjoy being able to learn about the history of the businesses in their neighborhoods. If this is successful, we hope to expand our database and website to include other cities besides New York. 
+
+<p><hr>
+\appendix
+<p><a name="toc.1"><h1>1&nbsp;</h1>
+<a name="refrecordlinkage">
+
+We start by generating a comparison matrix for the observations, blocking by BBL (for more on the theory and practice of record linkage, refer to ). In other words, we generate a matrix comprised of all of the pairwise comparisons in each BBL, generating features based on the relationship between two records on some field. Formally, we define a matrix <font face=symbol>G</font> of size n &times; m where <font face=symbol>G</font><sub>i,:</sub> = <font face=symbol>g</font>(x,j) \coloneqq [<font face=symbol>q</font><sub>1</sub>,...,<font face=symbol>q</font><sub>m</sub> ]  <font face=symbol>"</font>  i <font face=symbol>Î</font> {1,...,n} where x,j  <font face=symbol>Î</font>  {I<sup><font face=symbol>b</font></sup>
+</td>
+<td nowrap align=center>
+  }  |  x  <font face=symbol>¹</font>  j and where I indexes the observations from our dataset \mathcalD in BBL <font face=symbol>b</font>. Here, <font face=symbol>q</font><sub>y</sub>  <font face=symbol>"</font> y <font face=symbol>Î</font> {1,...,m}, refer to the features generated by comparing record x to record j on field y. By way of illustration, at least one of these features (say <font face=symbol>q</font><sub>k</sub>) is defined as a comparison between the names of records x and j. Formally, 
+
+<table cellspacing=0  border=0 align=center>
+<tr>
+  <td nowrap align=center>
+     <font face=symbol>q</font><sub>k</sub> \coloneqq 
+  </td>
+  <td nowrap align="center">
+    <table cellspacing=0 border=0 >
+    <tr>
+      <td nowrap align="center">
+        \texttf<font face=symbol>-</font>idf<sub>[x,:]</sub> &#183; \texttf<font face=symbol>-</font>idf<sub>[j,:]</sub>
+      </td>
+    </tr>
+    </table>
+    <div class=hrcomp><hr noshade size=1></div>
+    <table cellspacing=0 border=0 >
+    <tr>
+      <td nowrap align=center>
+        ||\texttf<font face=symbol>-</font>idf<sub>[x,:]</sub>||*||\texttf<font face=symbol>-</font>idf<sub>[j,:]</sub>|| 
+      </td>
+    </tr>
+    </table>
+  </td>
+  <td nowrap align=center>
+     
+  </td>
+</tr>
+</table>
+
+where  \texttf<font face=symbol>-</font>idf refers to a term-frequency inverse document frequency matrix created for \mathcalD on the trigrams  (or contiguous sequence of 3 characters) of the business name string. <font size="-1"><i>For more on the tf-idf algorithm, refer to this helpful \hrefhttps://towardsdatascience.com/tf-idf-a-visual-explainer-and-python-implementation-on-presidential-inauguration-speeches-2a7671168550Medium explainer.</i></font> <font face=symbol>q</font><sub>k</sub> is also called the cosine similarity between \texttf<font face=symbol>-</font>idf<sub>[x,:]</sub> and \texttf<font face=symbol>-</font>idf<sub>[j,:]</sub>. <font size="-1"><i>\hrefhttps://towardsdatascience.com/understanding-cosine-similarity-and-its-application-fd42f585296aHere, cosine similarity is explained with some depth</i></font> 
+
+Once we have composed our comparison matrix <font face=symbol>G</font> for our dataset \mathcalD, we proceed by classifying each <font face=symbol>g</font>(x,j) as a match or a non-match, i.e. giving it a label in {0,1}, accordingly. We test two different strategies to accomplish this: a deterministic method, and a probabilistic method. The deterministic method uses a hard-coded procedure based on the features <font face=symbol>q</font><sub>y</sub> to determine label assignment. This procedure was developed heuristically, after observing matching behaviors over several iterations. The probabilistic method uses an unsupervised clustering algorithm, specifically the Mixed Deep Gaussian Mixture Model (MDGMM) of  with two components (match, and non-match), a DGMM specified to handle mixed data types (such as continuous, binary, and ordinal values).  Ultimately, the probabilistic method did not achieve observably better results than the deterministic method, so we proceed with the latter. Finally, connected components in our dataset \mathcalD are recovered using the labeled comparison matrix <font face=symbol>G</font><sup><font face=symbol>¢</font></sup>
+</td>
+<td nowrap align=center>
+  , and are assigned a unique identifier, called a `Location ID<font face=symbol>¢</font> or `LID<font face=symbol>¢</font>. LIDs that share a record identifier (assigned by the agencies) are given the same `Business ID<font face=symbol>¢</font>, or `BID<font face=symbol>¢</font>. 
+
+Phys.Rev. intendnotes
+<p><hr>
+\bibliographyReferences
+<p><hr>
+
+\enddocument
+
+<hr>
+<p><h1>Table Of Contents</h1>
+<p><a href="#toc.1"><h1>1&nbsp;</h1></a>
+</body>
+</html>

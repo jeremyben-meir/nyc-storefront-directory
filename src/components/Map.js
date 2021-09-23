@@ -140,9 +140,10 @@ export const Map = () => {
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/light-v10',
             zoom: 10.5,
-            maxZoom: 15.5,
-            minZoom: 8,
-            center: [-73.962141,40.72796]
+            maxZoom: 17.5,
+            minZoom: 10,
+            center: [-73.962141,40.72796],
+            maxBounds: [[-74.345945,40.465065],[-73.590632,40.997314]]
         });
 
         map.on('load', () => {

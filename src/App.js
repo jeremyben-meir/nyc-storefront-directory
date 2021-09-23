@@ -10,23 +10,23 @@ import NoMatch from './views/NoMatch';
 import Navbar from './components/Navbar';
 
 const navlinks = [
-  { name: "Map", to: "/open-storefront-directory" },
-  { name: "About", to: "/open-storefront-directory/about" },
-  { name: "Team", to: "/open-storefront-directory/team" }
+  { name: "Map", to: "/" },
+  { name: "About", to: "/about" },
+  { name: "Team", to: "/team" }
 ];
 const brand = { name: "open-storefront-directory", to: "home" };
 
 function App() {
   return (
-      <Router>
+    <Router basename="/open-storefront-directory">
       <React.Fragment>
       <Navbar brand={brand} links={navlinks} />
       
         <Switch>
-          <Route path="/open-storefront-directory" exact component={Home}/>
-          <Route path="/open-storefront-directory/about" exact component={About}/>
-          <Route path="/open-storefront-directory/team" exact component={Team}/>
-          <Route path="/open-storefront-directory" component={NoMatch}/>
+          <Route path="/" exact component={Home}/>
+          <Route path="/about" exact component={About}/>
+          <Route path="/team" exact component={Team}/>
+          <Route component={NoMatch}/>
         </Switch>
     </React.Fragment>
     </Router>

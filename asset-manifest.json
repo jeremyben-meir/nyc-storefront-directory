@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/open-storefront-directory/static/css/main.55595d3d.chunk.css",
-    "main.js": "/open-storefront-directory/static/js/main.7b0bd343.chunk.js",
-    "main.js.map": "/open-storefront-directory/static/js/main.7b0bd343.chunk.js.map",
+    "main.js": "/open-storefront-directory/static/js/main.d6ffe177.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.d6ffe177.chunk.js.map",
     "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.0619015b.js",
     "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.0619015b.js.map",
-    "static/js/2.63d8f44b.chunk.js": "/open-storefront-directory/static/js/2.63d8f44b.chunk.js",
-    "static/js/2.63d8f44b.chunk.js.map": "/open-storefront-directory/static/js/2.63d8f44b.chunk.js.map",
+    "static/js/2.62698eed.chunk.js": "/open-storefront-directory/static/js/2.62698eed.chunk.js",
+    "static/js/2.62698eed.chunk.js.map": "/open-storefront-directory/static/js/2.62698eed.chunk.js.map",
     "static/js/3.fcc0a985.chunk.js": "/open-storefront-directory/static/js/3.fcc0a985.chunk.js",
     "static/js/3.fcc0a985.chunk.js.map": "/open-storefront-directory/static/js/3.fcc0a985.chunk.js.map",
     "index.html": "/open-storefront-directory/index.html",
     "static/css/main.55595d3d.chunk.css.map": "/open-storefront-directory/static/css/main.55595d3d.chunk.css.map",
-    "static/js/2.63d8f44b.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.63d8f44b.chunk.js.LICENSE.txt",
+    "static/js/2.62698eed.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.62698eed.chunk.js.LICENSE.txt",
     "static/js/mapbox-gl-csp-worker.9683f0af.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js",
     "static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map",
     "static/media/LOCUS.86fe803e.pdf": "/open-storefront-directory/static/media/LOCUS.86fe803e.pdf",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0619015b.js",
-    "static/js/2.63d8f44b.chunk.js",
+    "static/js/2.62698eed.chunk.js",
     "static/css/main.55595d3d.chunk.css",
-    "static/js/main.7b0bd343.chunk.js"
+    "static/js/main.d6ffe177.chunk.js"
   ]
 }

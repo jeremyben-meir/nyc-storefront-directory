@@ -41,11 +41,11 @@ export default function Map() {
                 <a>{memberList[name]['uni']}</a><br/>
                 <a>{memberList[name]['email']}</a>
             </div>
-            { memberList[name]['linkedin'] != null && <Link to={{ pathname: memberList[name]['linkedin'] }} target="_blank" rel="noopener noreferrer">
+            { memberList[name]['linkedin'] != null && <a href={memberList[name]['linkedin']} target="_blank">
                 <div style={{width:"30px",height:"30px",overflow: "hidden",marginTop:"10px",marginLeft:"auto",marginRight:"auto"}}>
                     <img src={linkedin} alt={name} style={{width:"100%",height:"100%"}}/>
                 </div>
-            </Link>}
+            </a>}
         </div>
     )
 

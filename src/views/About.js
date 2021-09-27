@@ -27,6 +27,7 @@ export default function Map() {
                     <Page pageNumber={3} />
                     <Page pageNumber={4} />
                     <Page pageNumber={5} />
+                    <Page pageNumber={6} />
                 </Document>
             </PDFContainer>
           {/* <p>Page {pageNumber} of {numPages}</p> */}

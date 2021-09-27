@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/open-storefront-directory/static/css/main.55595d3d.chunk.css",
-    "main.js": "/open-storefront-directory/static/js/main.586d02ae.chunk.js",
-    "main.js.map": "/open-storefront-directory/static/js/main.586d02ae.chunk.js.map",
+    "main.js": "/open-storefront-directory/static/js/main.d9ba474a.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.d9ba474a.chunk.js.map",
     "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.0619015b.js",
     "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.0619015b.js.map",
     "static/js/2.62698eed.chunk.js": "/open-storefront-directory/static/js/2.62698eed.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/2.62698eed.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.62698eed.chunk.js.LICENSE.txt",
     "static/js/mapbox-gl-csp-worker.9683f0af.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js",
     "static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map",
-    "static/media/LOCUS.86fe803e.pdf": "/open-storefront-directory/static/media/LOCUS.86fe803e.pdf",
+    "static/media/LOCUS.f7d99e3b.pdf": "/open-storefront-directory/static/media/LOCUS.f7d99e3b.pdf",
     "static/media/ignacio.ef777e9d.png": "/open-storefront-directory/static/media/ignacio.ef777e9d.png",
     "static/media/jeremy.5f5d8fdc.png": "/open-storefront-directory/static/media/jeremy.5f5d8fdc.png",
     "static/media/willie.e1c3769e.png": "/open-storefront-directory/static/media/willie.e1c3769e.png"
@@ -23,6 +23,6 @@
     "static/js/runtime-main.0619015b.js",
     "static/js/2.62698eed.chunk.js",
     "static/css/main.55595d3d.chunk.css",
-    "static/js/main.586d02ae.chunk.js"
+    "static/js/main.d9ba474a.chunk.js"
   ]
 }

@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/open-storefront-directory/static/css/main.55595d3d.chunk.css",
-    "main.js": "/open-storefront-directory/static/js/main.97bf2e68.chunk.js",
-    "main.js.map": "/open-storefront-directory/static/js/main.97bf2e68.chunk.js.map",
+    "main.js": "/open-storefront-directory/static/js/main.51e52bff.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.51e52bff.chunk.js.map",
     "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.0619015b.js",
     "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.0619015b.js.map",
-    "static/js/2.4fc10726.chunk.js": "/open-storefront-directory/static/js/2.4fc10726.chunk.js",
-    "static/js/2.4fc10726.chunk.js.map": "/open-storefront-directory/static/js/2.4fc10726.chunk.js.map",
+    "static/js/2.f3b56332.chunk.js": "/open-storefront-directory/static/js/2.f3b56332.chunk.js",
+    "static/js/2.f3b56332.chunk.js.map": "/open-storefront-directory/static/js/2.f3b56332.chunk.js.map",
     "static/js/3.fcc0a985.chunk.js": "/open-storefront-directory/static/js/3.fcc0a985.chunk.js",
     "static/js/3.fcc0a985.chunk.js.map": "/open-storefront-directory/static/js/3.fcc0a985.chunk.js.map",
     "index.html": "/open-storefront-directory/index.html",
     "static/css/main.55595d3d.chunk.css.map": "/open-storefront-directory/static/css/main.55595d3d.chunk.css.map",
-    "static/js/2.4fc10726.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.4fc10726.chunk.js.LICENSE.txt",
-    "static/js/mapbox-gl-csp-worker.9683f0af.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js",
-    "static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.9683f0af.worker.js.map",
+    "static/js/2.f3b56332.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.f3b56332.chunk.js.LICENSE.txt",
+    "static/js/mapbox-gl-csp-worker.7ebc806a.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.7ebc806a.worker.js",
+    "static/js/mapbox-gl-csp-worker.7ebc806a.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.7ebc806a.worker.js.map",
     "static/media/LOCUS.f7d99e3b.pdf": "/open-storefront-directory/static/media/LOCUS.f7d99e3b.pdf",
     "static/media/ignacio.ef777e9d.png": "/open-storefront-directory/static/media/ignacio.ef777e9d.png",
     "static/media/jeremy.5f5d8fdc.png": "/open-storefront-directory/static/media/jeremy.5f5d8fdc.png",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0619015b.js",
-    "static/js/2.4fc10726.chunk.js",
+    "static/js/2.f3b56332.chunk.js",
     "static/css/main.55595d3d.chunk.css",
-    "static/js/main.97bf2e68.chunk.js"
+    "static/js/main.51e52bff.chunk.js"
   ]
 }

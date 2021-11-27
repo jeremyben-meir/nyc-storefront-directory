@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/open-storefront-directory/static/css/main.55595d3d.chunk.css",
-    "main.js": "/open-storefront-directory/static/js/main.51e52bff.chunk.js",
-    "main.js.map": "/open-storefront-directory/static/js/main.51e52bff.chunk.js.map",
-    "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.0619015b.js",
-    "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.0619015b.js.map",
-    "static/js/2.f3b56332.chunk.js": "/open-storefront-directory/static/js/2.f3b56332.chunk.js",
-    "static/js/2.f3b56332.chunk.js.map": "/open-storefront-directory/static/js/2.f3b56332.chunk.js.map",
-    "static/js/3.fcc0a985.chunk.js": "/open-storefront-directory/static/js/3.fcc0a985.chunk.js",
-    "static/js/3.fcc0a985.chunk.js.map": "/open-storefront-directory/static/js/3.fcc0a985.chunk.js.map",
+    "main.js": "/open-storefront-directory/static/js/main.67f13ef8.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.67f13ef8.chunk.js.map",
+    "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.a7f80e8d.js",
+    "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.a7f80e8d.js.map",
+    "static/js/2.a4f31930.chunk.js": "/open-storefront-directory/static/js/2.a4f31930.chunk.js",
+    "static/js/2.a4f31930.chunk.js.map": "/open-storefront-directory/static/js/2.a4f31930.chunk.js.map",
+    "static/js/3.b00a97ba.chunk.js": "/open-storefront-directory/static/js/3.b00a97ba.chunk.js",
+    "static/js/3.b00a97ba.chunk.js.map": "/open-storefront-directory/static/js/3.b00a97ba.chunk.js.map",
     "index.html": "/open-storefront-directory/index.html",
     "static/css/main.55595d3d.chunk.css.map": "/open-storefront-directory/static/css/main.55595d3d.chunk.css.map",
-    "static/js/2.f3b56332.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.f3b56332.chunk.js.LICENSE.txt",
-    "static/js/mapbox-gl-csp-worker.7ebc806a.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.7ebc806a.worker.js",
-    "static/js/mapbox-gl-csp-worker.7ebc806a.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.7ebc806a.worker.js.map",
+    "static/js/2.a4f31930.chunk.js.LICENSE.txt": "/open-storefront-directory/static/js/2.a4f31930.chunk.js.LICENSE.txt",
+    "static/js/mapbox-gl-csp-worker.0ab86500.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.0ab86500.worker.js",
+    "static/js/mapbox-gl-csp-worker.0ab86500.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.0ab86500.worker.js.map",
     "static/media/LOCUS.f7d99e3b.pdf": "/open-storefront-directory/static/media/LOCUS.f7d99e3b.pdf",
     "static/media/ignacio.ef777e9d.png": "/open-storefront-directory/static/media/ignacio.ef777e9d.png",
     "static/media/jeremy.5f5d8fdc.png": "/open-storefront-directory/static/media/jeremy.5f5d8fdc.png",
     "static/media/willie.e1c3769e.png": "/open-storefront-directory/static/media/willie.e1c3769e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0619015b.js",
-    "static/js/2.f3b56332.chunk.js",
+    "static/js/runtime-main.a7f80e8d.js",
+    "static/js/2.a4f31930.chunk.js",
     "static/css/main.55595d3d.chunk.css",
-    "static/js/main.51e52bff.chunk.js"
+    "static/js/main.67f13ef8.chunk.js"
   ]
 }

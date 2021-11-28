@@ -1,121 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
-import * as LLIDPlaces from "../assets/llid_timeline.json";
-import * as BBLPlaces from "../assets/bbl_timeline.json";
 import mapboxgl from "mapbox-gl"
 import '../assets/App.css';
+import {colorDict, naics_string_dict, duration_string_dict,turnover_string_dict,vacancy_string_dict,legend_style,legend_style_left,legend_h4_style,legend_div_span_style} from "../assets/MapSettings.js";
 
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN
 
-export const Map = () => {
+export const Map = (params) => {
 
+    const LLIDPlaces = params["LLIDPlaces"];
+    const BBLPlaces = params["BBLPlaces"];
     const mapContainer = useRef()
     const [hover, setHover] = useState({})
     const [mapFocus, setMapFocus] = useState("Vacancy")
     const [mapSet, setMapSet] = useState()
 
-    const colorDict = {
-        "0" : '#00ff00',
-        "1" : '#30ff00',
-        "2" : '#60ff00',
-        "3" : '#90ff00',
-        "4" : '#c0ff00',
-        "5" : '#ffff00',
-        "6" : '#ffc000',
-        "7" : '#ff9000',
-        "8" : '#ff6000',
-        "9" : '#ff3000',
-        "10" : '#ff0000'
-    }
-    
-    const naics_string_dict = {
-        "0" : 'Raw Goods Producers',
-        "1" : 'Raw Goods Processors',
-        "2" : 'Materials Manufacturers',
-        "3" : 'Equipment/Vehicle Manufacturers',
-        "4" : 'Goods Wholesalers; Groceries',
-        "5" : 'Goods Retailers',
-        "6" : 'Transportation',
-        "7" : 'Business-oriented Services',
-        "8" : 'Personal Services',
-        "9" : 'Govt. and Civil Society',
-    }
-    
-    const duration_string_dict = {
-        "0" : '0-1',
-        "1" : '1-2',
-        "2" : '2-3',
-        "3" : '3-4',
-        "4" : '4-5',
-        "5" : '5-6',
-        "6" : '6-7',
-        "7" : '7-8',
-        "8" : '8-9',
-        "9" : '9-10',
-        "10" : '10+'
-    }
-    
-    const turnover_string_dict = {
-        "0" : '<(.8)',
-        "1" : '(.8)-(.6)',
-        "2" : '(.6)-(.4)',
-        "3" : '(.4)-(.2)',
-        "4" : '(.2)-0',
-        "5" : '0-.2',
-        "6" : '.2-.4',
-        "7" : '.4-.6',
-        "8" : '.6-.8',
-        "9" : '>.8',
-    }
-    
-    const vacancy_string_dict = {
-        "0" : '0-.1',
-        "1" : '.1-.2',
-        "2" : '.2-.3',
-        "3" : '.3-.4',
-        "4" : '.4-.5',
-        "5" : '.5-.6',
-        "6" : '.6-.7',
-        "7" : '.7-.8',
-        "8" : '.8-.9',
-        "9" : '.9-1',
-    }
-    
-    const legend_style = {
-        backgroundColor: '#fff',
-        borderRadius: '3px',
-        bottom: '30px',
-        boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
-        font: "12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif",
-        padding: "10px",
-        position: "absolute",
-        right: "10px",
-        zIndex: 1
-    }
-    const legend_style_left = {
-        backgroundColor: '#fff',
-        borderRadius: '3px',
-        bottom: '30px',
-        boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
-        font: "12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif",
-        padding: "10px",
-        position: "absolute",
-        left: "10px",
-        zIndex: 1
-    }
-    
-    const legend_h4_style = {
-        margin: "0 0 10px"
-    }
-    
-    const legend_div_span_style = {
-        borderRadius: "50%",
-        display: "inline-block",
-        height: "10px",
-        marginRight: "5px",
-        width: "10px"
-    }
-    
     const mapFocusDict = {
         'Duration':{
             "strings": duration_string_dict,
@@ -152,8 +51,12 @@ export const Map = () => {
 
                 map.addSource('places'+key, {
                     type: 'geojson',
-                    data: mapFocusDict[key]["places"].default
+                    data: mapFocusDict[key]["places"]
                 });
+
+                // console.log(mapFocusDict[key]["places"].default)
+                // console.log(BBLPlaces)
+                // console.log(LLIDPlaces)
 
                 map.addLayer({
                     'id': key,
@@ -237,9 +140,38 @@ export const Map = () => {
         });
     }
 
+    // useEffect(() => {
+
+    //     s3.getObject({
+    //         Bucket: process.env.REACT_APP_INTERNAL_BUCKET_NAME,
+    //         Key: 'data/bbl_timeline.json',
+    //     }, (err, data) => {
+    //         if (err) {
+    //             console.log(err, err.stack);
+    //         } else {
+    //             var response = JSON.parse(data.Body.toString())
+    //             setBBLPlaces(response)
+    //         }
+    //     });
+
+    //     s3.getObject({
+    //         Bucket: process.env.REACT_APP_INTERNAL_BUCKET_NAME,
+    //         Key: 'data/llid_timeline.json',
+    //     }, (err, data) => {
+    //         if (err) {
+    //             console.log(err, err.stack);
+    //         } else {
+    //             var response = JSON.parse(data.Body.toString())
+    //             setLLIDPlaces(response)
+    //         }
+    //     });
+
+    //     // update_map()            
+    // },[])
+
     useEffect(() => {
-        update_map()            
-    },[])
+        update_map()  
+    },[LLIDPlaces])
 
     useEffect(() => {
         if (mapSet != null){
@@ -284,7 +216,7 @@ export const Map = () => {
                 <div id="state-legend" className="legend" style={legend_style}>
                     <h4 style={legend_h4_style}>{mapFocus}</h4>
                     {Object.entries(mapFocusDict[mapFocus]["strings"]).map((item, index) => 
-                        <div><span style={{...legend_div_span_style, backgroundColor: colorDict[index]}}></span>{mapFocusDict[mapFocus]["strings"][index]}</div>
+                        <div key={"map".concat("",index)}><span style={{...legend_div_span_style, backgroundColor: colorDict[index]}}></span>{mapFocusDict[mapFocus]["strings"][index]}</div>
                     )}
                 </div>
                 <div id="state-legend" className="legend" style={legend_style_left}>

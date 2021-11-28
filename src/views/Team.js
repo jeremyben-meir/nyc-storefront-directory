@@ -31,8 +31,8 @@ export default function Map() {
         },
     };
 
-    const member = (name) => (
-        <div style={{width:"200px",height:"100%",flexFlow: "column", backgroundColor:"white",textAlign:"center"}}>
+    const member = (name,index) => (
+        <div key={"team".concat("",index)} style={{width:"200px",height:"100%",flexFlow: "column", backgroundColor:"white",textAlign:"center"}}>
             <div style={{width:"100%",height:"200px",overflow: "hidden"}}>
                 <img src={memberList[name]["img"]} alt={name} style={{borderRadius:"50%", width:"100%",height:"100%"}}/>
             </div>
@@ -52,7 +52,7 @@ export default function Map() {
     return (
         <div style={{width: "100%", height:"100%"}}>
             <div style={{width: "75%", height:"300px", display: "flex", justifyContent: "space-evenly",margin:"auto",position:"absolute",top:0,bottom:0,left:0,right:0, backgroundColor:"white"}}>
-                {Object.entries(memberList).map((link, index) => ( member(link[0]) ))}
+                {Object.entries(memberList).map((link, index) => ( member(link[0],index) ))}
             </div>
         </div>
     );

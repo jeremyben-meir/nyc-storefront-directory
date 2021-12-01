@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/open-storefront-directory/static/css/main.55595d3d.chunk.css",
-    "main.js": "/open-storefront-directory/static/js/main.2e8150c2.chunk.js",
-    "main.js.map": "/open-storefront-directory/static/js/main.2e8150c2.chunk.js.map",
+    "main.js": "/open-storefront-directory/static/js/main.24618d00.chunk.js",
+    "main.js.map": "/open-storefront-directory/static/js/main.24618d00.chunk.js.map",
     "runtime-main.js": "/open-storefront-directory/static/js/runtime-main.dfaf1d60.js",
     "runtime-main.js.map": "/open-storefront-directory/static/js/runtime-main.dfaf1d60.js.map",
     "static/js/2.1d8ac50f.chunk.js": "/open-storefront-directory/static/js/2.1d8ac50f.chunk.js",
@@ -15,14 +15,14 @@
     "static/js/mapbox-gl-csp-worker.84da7b25.worker.js": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.84da7b25.worker.js",
     "static/js/mapbox-gl-csp-worker.84da7b25.worker.js.map": "/open-storefront-directory/static/js/mapbox-gl-csp-worker.84da7b25.worker.js.map",
     "static/media/LOCUS.f7d99e3b.pdf": "/open-storefront-directory/static/media/LOCUS.f7d99e3b.pdf",
-    "static/media/ignacio.ef777e9d.png": "/open-storefront-directory/static/media/ignacio.ef777e9d.png",
-    "static/media/jeremy.5f5d8fdc.png": "/open-storefront-directory/static/media/jeremy.5f5d8fdc.png",
-    "static/media/willie.e1c3769e.png": "/open-storefront-directory/static/media/willie.e1c3769e.png"
+    "static/media/ignacio.44019902.png": "/open-storefront-directory/static/media/ignacio.44019902.png",
+    "static/media/jeremy.44019902.png": "/open-storefront-directory/static/media/jeremy.44019902.png",
+    "static/media/willie.44019902.png": "/open-storefront-directory/static/media/willie.44019902.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dfaf1d60.js",
     "static/js/2.1d8ac50f.chunk.js",
     "static/css/main.55595d3d.chunk.css",
-    "static/js/main.2e8150c2.chunk.js"
+    "static/js/main.24618d00.chunk.js"
   ]
 }

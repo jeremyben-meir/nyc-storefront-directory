@@ -11,6 +11,7 @@ export const Map = (params) => {
 
     const LLIDPlaces = params["LLIDPlaces"];
     const BBLPlaces = params["BBLPlaces"];
+    const predictions = params["predictions"];
     const mapContainer = useRef();
     const [hover, setHover] = useState({})
     const [mapFocus, setMapFocus] = useState("Vacancy")
@@ -75,7 +76,7 @@ export const Map = (params) => {
         },
         'Prediction':{
             "strings": [0,1,2,3,4,5,6,7,8,9,"10+"],
-            "places": LLIDPlaces,
+            "places": predictions,
             "htm": llid_htm,
             "set_key": set_key_llid,
         }

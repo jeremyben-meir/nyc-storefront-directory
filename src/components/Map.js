@@ -130,8 +130,6 @@ export const Map = (params) => {
 
             for(let [key, value] of Object.entries(mapFocusDict)){
 
-                console.log('places'+key);
-
                 map.addSource('places'+key, {
                     type: 'geojson',
                     data: mapFocusDict[key]["places"]

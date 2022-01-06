@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-openstorefrontdirect-dev-150209-authRole",
+      "UnauthRoleArn": "arn:aws:iam::626970594875:role/amplify-openstorefrontdirect-dev-150209-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::626970594875:role/amplify-openstorefrontdirect-dev-150209-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-openstorefrontdirect-dev-150209-deployment",
+      "UnauthRoleName": "amplify-openstorefrontdirect-dev-150209-unauthRole",
+      "StackName": "amplify-openstorefrontdirect-dev-150209",
+      "StackId": "arn:aws:cloudformation:us-east-1:626970594875:stack/amplify-openstorefrontdirect-dev-150209/8976e4b0-6f2b-11ec-8c40-1256a0fbfcf9",
+      "AmplifyAppId": "d2ylyon9hbu2bk"
+    },
+    "categories": {
+      "auth": {
+        "openstorefrontdirect33dab34b": {},
+        "true": {}
+      }
+    }
+  }
+}

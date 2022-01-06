@@ -50,7 +50,9 @@
   },
   "devDependencies": {
     "@material-ui/core": "^4.12.3",
+    "aws-amplify": "^4.3.11",
     "aws-sdk": "^2.1037.0",
+    "ethers": "^5.5.2",
     "gh-pages": "^3.2.3"
   }
 }

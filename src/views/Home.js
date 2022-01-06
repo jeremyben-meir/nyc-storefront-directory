@@ -1,61 +1,39 @@
 import {Map} from '../components/Map.js';
 import disableScroll from 'disable-scroll';
 import React, { useState, useEffect } from "react";
-import * as LLIDPlacesJSON from "../assets/temp/llid_timeline.json";
-import * as BBLPlacesJSON from "../assets/temp/bbl_timeline.json";
-import * as PredictionsJSON from "../assets/temp/predictions.json";
-import AWS from 'aws-sdk';
+import Amplify, { Storage } from 'aws-amplify';
+import awsconfig from '../aws-exports';
 
-// AWS.config.update({
-//   accessKeyId: process.env.REACT_APP_ACCESS_ID,
-//   secretAccessKey: process.env.REACT_APP_ACCESS_KEY,
-// });
+Amplify.configure(awsconfig);
 
 const Home = () => {
-  const s3 = new AWS.S3();
-  const devSwitch = "no_pull"
   const [errorSig, setErrorSig] = useState(null)
-  const [BBLPlaces, setBBLPlaces] = useState(false)
+  const [BBLPlaces, setBBLPlaces] = useState(null)
   const [LLIDPlaces, setLLIDPlaces] = useState(null)
   const [predictions, setPredictions] = useState(null)
 
   useEffect( () => disableScroll.on(), [] );
   useEffect( () => () => disableScroll.off(), [] );
 
-  useEffect(() => {
-
-    if (devSwitch == "pull"){
-      s3.getObject({
-          Bucket: process.env.REACT_APP_INTERNAL_BUCKET_NAME,
-          Key: 'data/bbl_timeline.json',
-      }, (err, data) => {
-          if (err) {
-              setErrorSig(true);
-              console.log(err, err.stack);
-          } else {
-              var response = JSON.parse(data.Body.toString())
-              setBBLPlaces(response)
-              s3.getObject({
-                  Bucket: process.env.REACT_APP_INTERNAL_BUCKET_NAME,
-                  Key: 'data/llid_timeline.json',
-              }, (err, data) => {
-                  if (err) {
-                      setErrorSig(true);
-                      console.log(err, err.stack);
-                  } else {
-                      var response = JSON.parse(data.Body.toString())
-                      setLLIDPlaces(response)
-                  }
-              });    
-          }
+  function get_storage(setter,filepath){
+    Storage.get(filepath, { download: true })
+    .then(data => {
+      data.Body.text().then(string => { 
+        var response = JSON.parse(string)
+        console.log(response)
+        setter(response)
       });
-    } else {
-      setBBLPlaces(BBLPlacesJSON.default)
-      setLLIDPlaces(LLIDPlacesJSON.default)
-      setPredictions(PredictionsJSON.default)
-    }
+    })
+    .catch(err => {
+      setErrorSig(true);
+      console.log(err, err.stack);
+    })
+  }
 
-          
+  useEffect(() => {
+    get_storage(setPredictions,"predictions.json")   
+    get_storage(setBBLPlaces,"bbl_timeline.json")
+    get_storage(setLLIDPlaces,"llid_timeline.json")
   },[])
 
   var errorStyle = {

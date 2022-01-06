@@ -50,5 +50,22 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": []
     }
+  },
+  "function": {
+    "businessrequestdata": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "api",
+          "resourceName": "openstorefrontdirect",
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ]
+        }
+      ]
+    }
   }
 }

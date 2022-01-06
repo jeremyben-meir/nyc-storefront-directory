@@ -15,6 +15,13 @@
       "auth": {
         "openstorefrontdirectfea258f8": {},
         "true": {}
+      },
+      "function": {
+        "businessrequestdata": {
+          "sesEmail": "jeremybenmeir@gmail.com",
+          "deploymentBucketName": "amplify-openstorefrontdirect-dev-155339-deployment",
+          "s3Key": "amplify-builds/businessrequestdata-2b5638415632466c444b-build.zip"
+        }
       }
     }
   }

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ethers } from "ethers";
-import ErrorMessage from "../components/ErrorMessage";
+import { API } from "aws-amplify";
+import { createTodo } from "../graphql/mutations";
+import AlertMessage from "../components/AlertMessage";
 import TxList from "../components/TxList";
 import * as Styles from "../assets/FormStyles";
 
@@ -10,7 +12,7 @@ const validateEmail = (email) => {
     );
 };
 
-const startPayment = async ({ setError, setTxs, email }) => {
+const startPayment = async ({ setAlert, setTxs, email }) => {
   try {
     if (!email)
         throw new Error("Email address required.");
@@ -33,26 +35,39 @@ const startPayment = async ({ setError, setTxs, email }) => {
       to: addr,
       value: ethers.utils.parseEther(ether)
     });
+    await API.graphql({
+      query: createTodo,
+      variables:{
+        input:{
+          email
+        }
+      }
+    })
     console.log({ ether, addr });
     console.log("tx", tx);
-    setTxs([tx]);
-    setError();
+    setAlert({
+      "message":"Payment received! Check your email address.",
+      "type":"success"
+    });
 } catch (err) {
-    setError(err.message);
-    setTxs();
+    setAlert({
+      "message":err.message,
+      "type":"error"
+    });
+    // setTxs();
   }
 };
 
 export const GetData = (params) => {
-    const [error, setError] = useState();
+    const [alert, setAlert] = useState();
     const [txs, setTxs] = useState([]);
 
     const handleSubmit = async (e) => {
       e.preventDefault();
       const data = new FormData(e.target);
-      setError();
+      setAlert();
       await startPayment({
-        setError,
+        setAlert,
         setTxs,
         email: data.get("email")
       });
@@ -79,7 +94,7 @@ export const GetData = (params) => {
                 >
                 Pay now
                 </button>
-                <ErrorMessage message={error} />
+                <AlertMessage details={alert} />
                 <TxList txs={txs} />
             </div>
 

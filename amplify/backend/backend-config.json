@@ -1,6 +1,23 @@
 {
+  "api": {
+    "openstorefrontdirect": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
+  },
   "auth": {
-    "openstorefrontdirect33dab34b": {
+    "openstorefrontdirectfea258f8": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

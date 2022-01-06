@@ -1,6 +1,6 @@
 {
   "resourceName": "businessstorage",
-  "policyUUID": "7ca98eb7",
+  "policyUUID": "1cd00040",
   "bucketName": "businessstorages3",
   "storageAccess": "authAndGuest",
   "guestAccess": [

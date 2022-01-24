@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";  
-import ignacio from '../assets/team/temp/ignacio.png';
+import ignacio from '../assets/team/ignacio.png';
 import william from '../assets/team/temp/willie.png';
-import jeremy from '../assets/team/temp/jeremy.png';
+import jeremy from '../assets/team/jeremy.png';
 import linkedin from '../assets/team/linkedin.png';
 import { Route, Switch, Link } from "react-router-dom";
 

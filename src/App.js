@@ -14,7 +14,7 @@ const navlinks = [
   { name: "Map", to: "/" },
   { name: "About", to: "/about" },
   { name: "Team", to: "/team" },
-  { name: "Get Data", to: "/getdata" }
+  // { name: "Get Data", to: "/getdata" }
 ];
 const brand = { name: "open-storefront-directory", to: "home" };
 
@@ -28,7 +28,7 @@ function App() {
           <Route path="/" exact component={Home}/>
           <Route path="/about" exact component={About}/>
           <Route path="/team" exact component={Team}/>
-          <Route path="/getdata" exact component={GetData}/>
+          {/* <Route path="/getdata" exact component={GetData}/> */}
           <Route component={NoMatch}/>
         </Switch>
     </React.Fragment>

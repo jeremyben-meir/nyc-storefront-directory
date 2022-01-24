@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import mapboxgl from "mapbox-gl"
 import '../assets/App.css';
 import { Button } from '@material-ui/core';
-import {legend_style,legend_style_left,legend_h4_style,legend_div_span_style} from "../assets/MapSettings.js";
+import {legend_style,legend_style_left,legend_h4_style,legend_div_span_style,legend_style_middle} from "../assets/MapSettings.js";
 
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN
@@ -201,12 +201,15 @@ export const Map = (params) => {
 
     return (
         <div> 
-            <div ref={mapContainer} style={{ width: "100vw", height: "100vh" }}>
+            <div ref={mapContainer} style={{ width: "100vw", height: "100vh"}}>
                 <div id="state-legend" className="legend" style={legend_style}>
                     <h4 style={legend_h4_style}>{mapFocus}</h4>
                     {Object.entries(mapFocusDict[mapFocus]["strings"]).map((item, index) => 
                         <div key={"map".concat("",index)}><span style={{...legend_div_span_style, backgroundColor: keyVars["color_dict"][index]}}></span>{mapFocusDict[mapFocus]["strings"][index]}</div>
                     )}
+                </div>
+                <div id="state-legend" className="legend" style={legend_style_middle}>
+                Funded by the Harvard Mellon Urban Initiative
                 </div>
                 <div id="state-legend" className="legend" style={legend_style_left}>
                     {mapFocusDict[mapFocus]["htm"]}

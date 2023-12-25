@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {text} from '../assets/method_file.js';
 import { Document , Page, pdfjs} from 'react-pdf'
 import styled from "styled-components";
-import file from "../assets/LOCUS.pdf";
+import file from "../assets/docs/whitepaper.pdf";
 
 export default function Map() {
 

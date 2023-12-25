@@ -10,7 +10,7 @@ import whitepaper_file from "../assets/docs/whitepaper.pdf";
 export default function Links() {
 
     var linkList = {
-        "Whitepaper": {
+        "White paper": {
             "link": whitepaper_file,
             "img": whitepaper,
         },
